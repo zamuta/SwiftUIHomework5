@@ -31,6 +31,8 @@
 		4D7A7672286A39DE001AFAA7 /* HomeworkWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4D7A7661286A39DD001AFAA7 /* HomeworkWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4D7A7678286B0C99001AFAA7 /* WidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7A7677286B0C99001AFAA7 /* WidgetEntry.swift */; };
 		4D7A767A286B0CE6001AFAA7 /* WidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7A7679286B0CE6001AFAA7 /* WidgetEntryView.swift */; };
+		4D869112286B600F004BC146 /* WidgetLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869111286B600F004BC146 /* WidgetLink.swift */; };
+		4D869113286B600F004BC146 /* WidgetLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D869111286B600F004BC146 /* WidgetLink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,7 @@
 		4D7A7679286B0CE6001AFAA7 /* WidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEntryView.swift; sourceTree = "<group>"; };
 		4D86910F286B55E3004BC146 /* HomeworkWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HomeworkWidgetExtension.entitlements; sourceTree = "<group>"; };
 		4D869110286B5608004BC146 /* SwiftUIHomework5 (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwiftUIHomework5 (iOS).entitlements"; sourceTree = "<group>"; };
+		4D869111286B600F004BC146 /* WidgetLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetLink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,7 @@
 				4D7A7677286B0C99001AFAA7 /* WidgetEntry.swift */,
 				4D7A7679286B0CE6001AFAA7 /* WidgetEntryView.swift */,
 				4D6EB618286B45F0006729B0 /* WidgetBridge.swift */,
+				4D869111286B600F004BC146 /* WidgetLink.swift */,
 				4D7A766A286A39DD001AFAA7 /* HomeworkWidget.intentdefinition */,
 				4D7A766B286A39DE001AFAA7 /* Assets.xcassets */,
 				4D7A766D286A39DE001AFAA7 /* Info.plist */,
@@ -297,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3B011F285F195C00F8572A /* SuffixIterator.swift in Sources */,
+				4D869112286B600F004BC146 /* WidgetLink.swift in Sources */,
 				4D3B0100285F0D9600F8572A /* ContentView.swift in Sources */,
 				4D3B011C285F194F00F8572A /* SuffixSequence.swift in Sources */,
 				4D3B0116285F138900F8572A /* SuffixViewModel.swift in Sources */,
@@ -315,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7A766E286A39DE001AFAA7 /* HomeworkWidget.intentdefinition in Sources */,
+				4D869113286B600F004BC146 /* WidgetLink.swift in Sources */,
 				4D6B7E07286B0F8900B3AE61 /* SuffixSequence.swift in Sources */,
 				4D7A767A286B0CE6001AFAA7 /* WidgetEntryView.swift in Sources */,
 				4D7A7678286B0C99001AFAA7 /* WidgetEntry.swift in Sources */,

@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isSuffixScreenActive : Bool = false
+    
     var body: some View {
         NavigationView {
-            TextScreenView()
+            TextScreenView(isSuffixScreenActive: $isSuffixScreenActive)
+        }
+        .onOpenURL { url in
+            if url == WidgetLink.main {
+                isSuffixScreenActive = false
+            }
+            else if url == WidgetLink.suffixes {
+                isSuffixScreenActive = true
+            }
         }
     }
 }

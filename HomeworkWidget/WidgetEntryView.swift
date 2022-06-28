@@ -13,7 +13,14 @@ struct WidgetEntryView : View {
     var body: some View {
         let suffixes = entry.suffixes.joined(separator: ", ")
         let text = suffixes.count > 0 ? "Suffixes: \(suffixes)" : "No Suffixes"
-        Text(text)
-            .font(.footnote)
+        VStack {
+            Text(text)
+                .font(.footnote)
+            HStack {
+                Link("To Main", destination: WidgetLink.main)
+                Link("To Suffixes", destination: WidgetLink.suffixes)
+            }
+            .foregroundColor(.blue)
+        }
     }
 }
