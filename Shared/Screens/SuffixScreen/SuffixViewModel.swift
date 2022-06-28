@@ -12,7 +12,7 @@ import Combine
 class SuffixViewModel: ObservableObject {
     @Published var searchSuffix: String = "" {
         didSet {
-            handleFilters(searchSuffix: searchSuffix, invertOrder: invertOrder)
+            isSearching = true
         }
     }
     @Published var invertOrder:  Bool = false {
@@ -23,6 +23,21 @@ class SuffixViewModel: ObservableObject {
 
     @Published private(set) var orderedArray: [SuffixModel] = []
     @Published private(set) var top10Array:   [SuffixModel] = []
+    
+    var isSearching: Bool = false
+    private var subscriptions: Set<AnyCancellable> = []
+    
+    init() {
+        $searchSuffix
+          .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+          .removeDuplicates()
+          .sink(receiveValue: { [weak self] newValue in
+              guard let self = self else { return }
+              self.isSearching = false
+              self.handleFilters(searchSuffix: newValue, invertOrder: self.invertOrder)
+          })
+          .store(in: &subscriptions)
+    }
     
     private var text:   String? = nil
     private var models: [SuffixModel] = []

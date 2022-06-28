@@ -35,16 +35,18 @@ struct SuffixScreenView: View {
             }
             List {
                 let array: [SuffixModel] = pickerSelection == .all ? viewModel.orderedArray : viewModel.top10Array
-                ForEach(array, id: \.self) { model in
-                    HStack {
-                        Text(model.suffix) { string in
-                            if let range = string.range(of: viewModel.searchSuffix) {
-                                string[range].foregroundColor = .blue
+                if (!viewModel.isSearching) {
+                    ForEach(array, id: \.self) { model in
+                        HStack {
+                            Text(model.suffix) { string in
+                                if let range = string.range(of: viewModel.searchSuffix) {
+                                    string[range].foregroundColor = .blue
+                                }
                             }
+                            .fontWeight(.semibold)
+                            Spacer()
+                            Text("\(model.count)")
                         }
-                        .fontWeight(.semibold)
-                        Spacer()
-                        Text("\(model.count)")
                     }
                 }
             }
